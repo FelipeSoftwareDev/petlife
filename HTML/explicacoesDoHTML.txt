@@ -1,0 +1,105 @@
+Tags html:
+head: aonde ficam as informações da página que não aparecem
+, ou seja os metadados , como o título que deve
+aparecer na aba do navegador, o título da página como resultado de
+buscas no navegador, tipo de carácteres das letras, etc.
+
+<meta name= "description" content="o que você escrever dentro desta tag
+é o que vai aparecer como titulo no google quando pesquisarem por sua
+página"  >   
+
+
+<body> é aonde vai ficar a estrutura que vai aparecer do seu site, é
+literalmente o corpo dele
+<h1> é um tipo de header (Título)
+(a tag <h> <h/> vai de 1 a 6 ficando cada vez menor, o h1 é o maior
+e o 6 é o menor)
+
+<header> é o cabeçalho, acima do título, geralmente com alguns botões de link (criados com a tag <a>) para outras partes do site ou até pra scrollar até uma parte especifica
+dessa página
+
+<p> é um parágrafo
+
+tag <a> é uma tag âncora, ela serve pra criar um vínculo (link) com outro documento, por exemplo linkar outra parte do site, ou scrollar pra uma parte
+diferente desta página.
+href é o que usaremos para de fato criar o link dentro da tag <a>, ele vai conter o caminho que o link vai direcionar e o nome como
+ele vai aparecer, exemplo: <a href="/meuSite"Texto do Link> </a> 
+                                       ^^ "tem que ser o nome exato do arquivo ou página da internet completa com protocolo"
+
+<a href="http://www.google.com.br">Google</a> (exemplo de como direcionar o link p pg do google, lembrando que tem q ter o protocolo(http://))
+ Para acessar o link em outra aba você pode usar a tag target com o atributo _blank, exp:
+ <a href="contato.html" target="_blank">Contato</a> 
+
+ Para criar um link na própria imagem, misture Utilize a tag img entre a abertura da tag a e seu fechamento
+    <a href="/index.html">
+        <img src="/imagens/logo.svg">
+    </a>
+
+Para fazer links de navegação dentro da própria página usaremos a tag<nav> conciliando com a # dentro do href:
+ <nav> 
+ <a href="#inicio">Início</a>
+ (a # indica uma seção dentro da minha página atual, use sempre esses termos em minúsculo e sem acento para evitar erros nas URLS)
+ </nav>
+Para fazer um link que direcione a mandar um e-mail use "mailto" dentro da tag ancora
+
+a tag para alocar imagens <img> n tem fechamento, depois dela vc vai usar o src="endereçoDoArquivo/" para acessar uma pasta
+dentro da outra, você vai sempre separando elas por barra e na pasta final também vai ter uma barra dps, sempre se encerra em/ antes
+do arquivo que tem a imagem, exp:
+<img src="imagens/icones/arrow-down.svg"> -> para que o link abra em outra aba você pode adicionar a href=" " target="_blank"  no final da tag a
+     ^^^ Src vem de source, logo é a origem daquele arquivo, o caminho para encontrar a imagem.
+Ao aplicar imagens podemos reservar um espaço pra ela demarcando a altura ("height") e a largura ("width") da imagem, 
+se for uma imagem 250 por 250 vc coloca lá width ="250" height = "250" Isso serve pra página não carregar na ordem errada e a imagem
+ficar fora de lugar
+o comando alt="(mensagem)" dentro da tag imagem, ele carrega uma mensagem caso a imagem n carregue, é interessante também pra n perder
+um link que esteja dentro da imagem
+
+Todo conteúdo que for referente a página que vc está codando fica dentro da tag <main> </main>, fora dele ficam apenas conteúdos
+que não fazem parte do conteúdo específico daquela página, como por exemplo o header, o cabeçalho vai estar presente em todas as páginas,
+logo ele fica fora da tag main.
+
+O h1 é o título principal da página, boa prática usar ele apenas uma vez na página, e depois usar os demais <h*></h*> como subtitulos
+<h1> (Título da página)</h1>
+    <h3> h3 </h3>
+    <h2> h2</h2>
+    <p> first Paragraph</p>
+
+Para listas ordenadas ol (ordered lists) 
+Para listas não ordenadas ul (unordered lists)
+dentro das tags de lista vc precisa usar as tags li (list items)
+
+Para determinar quais itens serão carregados primeiros vc pode usar o "loading", dentro do loading a opção eager vai carregar aquele
+item mais rápido e a opção  lazy vai fazer ele demorar mais a carregar, isso serve pra você dar prioridade a imagens, vídeos, etc.
+que venham antes na página, os arquivos mais abaixo podem ser carregados mais devagar visto que o usuário vai navegar pela página 
+de cima para baixo.
+
+
+
+Atalhos de facilidade: Alt + seta pra cima ou para baixo reposiciona a linha, transferindo ela pra cima ou pra baixo.
+
+Perceba que no seguinte trecho:
+  <section id="clinica">
+            <div>
+                    <h2>Cuidado veterinário de qualidade</h2>
+                    <p>Nossa Clínica veterinária é o local onde a paixão pelos animais se une à excelência em cuidados
+                    veterinários. Sob a liderança da Dra. Vivian Reid, uma profissional altamente qualificada e comprometida,
+                    oferecemos serviços de saúde e bem-estar para animais de estimação de todas as espécies.
+                    Venha conhecer nossa clinica e desfrute da atenção personalizada e do carinho que seu pet merece.
+                    </p>
+                <ul>
+                    <li>Consulta de rotina e exames de saúde abrangentes</li>
+                    <li>Vanicação e imunização</li>
+                    <li>Cirurgia e procedimentos veterinários</li>
+                    <li>Tratamento e controle de doenças</li>
+                    <li>Odontologia veterinária</li>
+                    <li>Atendimento de emergência 24H</li>
+                    <li>Nutrição e acompanhamento alimentar personalizado</li>
+                </ul>
+            </div>
+            <img src="/imagens/clinic-img.svg" alt="Médica veterinária" width="480" height="480" loading="lazy">
+
+    A imagem foi colocada depois de todos os textos e listas, então quando centralizarmos essa seção a imagem vai ficar a direita,
+    já que o que vem antes é centralizado no sentido do começo da página, da esquerda para direita.(deu p entender(?))
+
+    Consigo usar o javascript dentro de uma tag html com scripts que reajam a certa alção, por exemplo
+   <img=src"" onclick="alert('Você clicou na imagem')">
+   Ao clicar nessa imagem ele vai disparar um alert do javascript

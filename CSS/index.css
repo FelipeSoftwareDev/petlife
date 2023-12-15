@@ -1,0 +1,208 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat', sans-serif;
+}
+body{
+    color: #263138;
+}
+
+
+header{
+    background-color: #FF9A6C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+header nav a{
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+}
+
+#inicio{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /*topo, direita, baixo, esquerda*/
+    padding: 24px,80px, 128px, 80px;
+    position: relative;
+}
+
+h1, h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo{
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.button {
+    background-color: #FF725E;
+/* Vertical e horizontal, se vc só colocar 2 def. ele entende nessa ordem*/
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.transparent-button{
+    background-color: transparent;
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: #FF725E;
+    text-underline-offset: 4px;
+}
+
+.absolute{
+    /*Ele vai ficar aonde você posicionou ele, idependente se tiver outro elemento ali ou não*/
+    position: absolute;
+    /* Bottom 0 faz ele ir para o fundo daquela seção que você colocou ele, já que o valor abaixo dele é 0, n tem nd abaixo*/
+    bottom: 0;
+    /* Left 0 faz ele ir todo para a esquerda no canto da tela*/
+    left: 0;
+    /* width 100% vai fazer ele tomar a largura da página inteira*/
+    width: 100%;
+    /* z-index é o valor da profundidade dos elementos, estou colocando valor negativo para que ele fique por trás da imagem*/
+    z-index: -10;
+}
+
+#clinica{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#farmacia{
+    padding: 64px 80px ;
+    text-align: center;
+}
+
+       /*Este "auto" referente a margem horizontal vai colocar a margem 
+       suficiente pra ficar centralizado, já que colocamos o tex-align center
+       para toda a seção da farmácia.*/
+#farmacia img {
+    margin: 64px auto;
+
+}
+
+/* Novamente utilizamos o auto para que ele calcule automaticamente a margem certa
+para a esquerda e para a direita para deixar sempre centralizado*/
+
+#farmacia .paragrafo{ 
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+#duvidas{
+    display:flex;
+    align-items: center;
+    gap: 64px ;
+    padding: 64px 80px ;
+}
+
+.duvida{
+    position: relative;
+}
+
+.duvida h3{
+    /* Essa bordinha vai ser pra posteriormente transformar os paragrafos em transições para
+    revelar a reposta da dúvida em questão*/
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    /* o pointer serve para tornar o cursor naquela mãozinha quando passar o mouse em cima do 
+    h3, indicando que você pode clicar nele como se fosse um link*/
+    cursor: pointer;
+    padding: 24px;
+
+}
+
+.duvida img{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo {
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-right: 1px solid #FF725E;
+    border-radius: 8px;
+    margin-top: -8px;
+    /* zerar o padding vertical para o elemento n ficar aparecendo*/
+    padding: 0 24px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    /*Adicionado para deixar a transição mais fluida, as duvidas não vao simplesmente aparecer na tela, mas sim descer
+    com uma animação curta que não cause estranheza*/
+    transition: .3s;
+}
+/* aqui em baixo não teremos separação entre .duvida e .ativa porque o seletor vai direcionar apenas para o elemento que tenha
+AMBAS AS CLASSES (simultaneamente) e dentro dela vai alterar as classes de paragrafo*/
+.duvida.ativa .paragrafo {
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+
+
+footer{
+    background-color: rgba(255, 152, 108, 0.25);
+    /* Flex colocando os elementos, que estavam empilhados, um ao lado do outro*/
+    display: flex;
+    /* space-between vai espaçar eles horizontalmente de forma mais distribuída, deixando a página mais preenchida ao inves de ficart
+    tudo apertado na esquerda*/
+    justify-content: space-between;
+    gap: 80px;
+    padding: 62px 80px; 
+}
+
+footer img, footer .titulo {
+    /* Strong tem por padrão o display inLine, que não permite colocar margem pra cima ou pra baixo, por isso vamos transformá-lo
+    em um display: block  */
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    
+}
+
+footer p a{
+    color: #263138;
+    text-decoration: none;
+}
+
+footer p{
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+#copyright{
+    background-color: #263138;
+    color: #FFFFFF;
+    padding: 24px;
+}
+
+#copyright a{
+    color: #FF9A6C;
+}
+
+
