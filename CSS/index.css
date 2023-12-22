@@ -83,6 +83,9 @@ h1, h2 {
     gap: 64px;
     padding: 64px 80px;
 }
+#clinica p{
+    margin-bottom: 20px;
+}
 
 #farmacia{
     padding: 64px 80px ;
