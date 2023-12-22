@@ -1,0 +1,52 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #FF9A6C;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+#contatotexto{
+    display: flex;
+    align-items: center;
+    padding: 24px,80px, 128px, 80px;
+    position: relative;
+    margin: 20px;
+}
+h1 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+h2 {
+    font-size: 25px;
+    margin: 15px 20 px;
+}
+.button {
+    background-color: #FF9A6C;
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 20px 10px;
+}
+
+#contatotexto img{
+    border-radius: 20px;
+    margin: 0px 15px 15px 20px;
+    border: solid 2px #FF9A6C;
+}
+
+.paragrafo {
+line-height: 150%;
+margin-bottom: 32px;
+font-size: 20px;
+}

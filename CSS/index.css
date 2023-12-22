@@ -49,7 +49,7 @@ h1, h2 {
 
 .button {
     background-color: #FF725E;
-/* Vertical e horizontal, se vc só colocar 2 def. ele entende nessa ordem*/
+/* Vertical e horizontal, se vc só definir 2 tamanhos ele entende nessa ordem*/
     padding: 16px 32px;
     border-radius: 8px;
     color: #FFFFFF;
